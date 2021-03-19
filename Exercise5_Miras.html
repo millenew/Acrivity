@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+	.menu{
+      border: 2px; 
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 20px 30px;
+      padding-top:10px;
+      color: white;
+      font-size: 20px;
+      align: top;
+    }
+    .menu:hover{
+      border: 2px solid orange; 
+      color: black;
+      background-color: white;
+      font-weight: bolder;
+    }
+    .menu-active{
+      border: 2px; 
+      border-radius: 5px;
+      padding: 20px 30px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: black;
+      color: yellow;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+		button{
+			text-transform: uppercase;
+			font-weight: bold;
+			border-radius: 5px;
+			width: 20%;
+			height: 10%;
+			font-size: 15px;
+		}
+		.p{
+			font-family: lato;
+			font-size: 20px;
+			width: 60%;
+		}
+		.container{
+			 height: 450px auto;
+      width: 500px;
+      margin: 50px auto;
+      background: #f7f7f7;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      -webkit-border-radius: 20px;
+      background-image: linear-gradient(red,orange,yellow);
+		}
+		#res{
+			font-size: 20px;
+		}
+
+	</style>
+	<center>
+     <div style="background-color: rgba(0,0,0,0.9); padding: 0px 20px 10px 20px; "> 
+      <a href="Exercise1_Miras.html" style="" class="menu">Exercise 1</a>
+      <a href="Exercise2_Miras.html" style="" class="menu">Exercise 2</a>
+      <a href="Exercise3_Miras.html" style="" class="menu">Exercise 3</a>
+      <a href="Exercise4_Miras.html" style="" class="menu">Exercise 4</a>
+      <a href="Exercise5_Miras.html" style="margin-bottom: 1000px;" class="menu-active">Exercise 5</a>
+      <a href="Exercise6_Miras.html" style="" class="menu">Exercise 6</a>
+      <a href="Exercise7_Miras.html" style="" class="menu">Exercise 7</a>
+    </div>
+
+	<center>
+		<div class="container">
+		<br>
+		<br>
+		<br>
+		<label class="p">Basic Arithmetic Operations</label>
+		<br>
+		<br>
+		<br>
+		<center>
+		<label class="p">Number 1 : </label>
+		</center>
+		<br>
+		<center>
+		<input type="text" id="first" class="p">
+		</center>
+		<br>
+		<center>
+		<br>
+		<center>
+		<label class="p">Number 2 : </label>
+		</center>
+		<br>
+		<input type="text" id="second" class="p">
+		</center>
+
+		<br>
+		<br>
+		<br>
+		<button onclick="add()">+</button>
+		<button onclick="sub()">-</button>
+		<button onclick="mul()">*</button>
+		<button onclick="div()">/</button>
+		<br>
+		<br>
+
+		<div id="res"></div>
+	</div>
+
+
+		<script type="text/javascript">
+			
+			function add(){
+
+				var num1=parseInt(document.querySelector("#first").value);
+				var num2=parseInt(document.querySelector("#second").value);
+				var result=num1+num2;
+				document.querySelector("#res").innerHTML=result;
+
+			}
+
+			function sub(){
+
+				var num1=parseInt(document.querySelector("#first").value);
+				var num2=parseInt(document.querySelector("#second").value);
+				var result=num1-num2;
+				document.querySelector("#res").innerHTML=result;
+
+			}
+
+			function mul(){
+
+				var num1=parseInt(document.querySelector("#first").value);
+				var num2=parseInt(document.querySelector("#second").value);
+				var result=num1*num2;
+				document.querySelector("#res").innerHTML=result;
+
+			}
+
+			function div(){
+
+				var num1=parseInt(document.querySelector("#first").value);
+				var num2=parseInt(document.querySelector("#second").value);
+				var result=num1/num2;
+				document.querySelector("#res").innerHTML=result;
+
+			}
+		
+
+
+		</script>
+
+
+	</center>
+
+</body>
+</html>

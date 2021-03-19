@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <body>
+    <style type="text/css">
+    .menu{
+      border: 2px; 
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 20px 30px;
+      padding-top:10px;
+      color: white;
+      font-size: 20px;
+      align: top;
+    }
+    .menu:hover{
+      border: 2px solid orange; 
+      color: black;
+      background-color: white;
+      font-weight: bolder;
+    }
+    .menu-active{
+      border: 2px; 
+      border-radius: 5px;
+      padding: 20px 30px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: black;
+      color: yellow;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+    .container{
+      height: 450px auto;
+      width: 500px;
+      margin: 50px auto;
+      background: #f7f7f7;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      -webkit-border-radius: 20px;
+      background-image: linear-gradient(red,orange,yellow);
+    }
+    button{
+     text-align: center;
+    }
+
+  </style>
+   <center>
+      <div style="background-color: rgba(0,0,0,0.9); padding: 0px 20px 10px 20px; "> 
+      <a href="Exercise1_Miras.html" style="" class="menu">Exercise 1</a>
+      <a href="Exercise2_Miras.html" style="" class="menu">Exercise 2</a>
+      <a href="Exercise3_Miras.html" style="" class="menu">Exercise 3</a>
+      <a href="Exercise4_Miras.html" style="" class="menu">Exercise 4</a>
+      <a href="Exercise5_Miras.html" style="" class="menu">Exercise 5</a>
+      <a href="Exercise6_Miras.html" style="margin-bottom: 1000px;" class="menu-active">Exercise 6</a>
+      <a href="Exercise7_Miras.html" style="" class="menu">Exercise 7</a>
+    </div>
+
+  <br>
+  <br>
+  <div class="container">
+  <br>
+  <br>
+  <button onclick="myFunction()">Click Here</button>
+  <h1>I am H1</h1>
+  </body>
+  <script>
+    function myFunction() {
+      var x = document.createElement("P");
+      var t = document.createTextNode("This is a paragraph followed by a list");
+      x.appendChild(t);
+      document.body.appendChild(x);
+      var a = document.createElement("P");
+      var b = document.createTextNode("I. This is first");
+      a.appendChild(b);
+      document.body.appendChild(a);
+      var c = document.createElement("P");
+      var d = document.createTextNode("II. This is second");
+      c.appendChild(d);
+      document.body.appendChild(c);
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tipping Calculator</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </head>
+   <center>
+  <body>
+    <style type="text/css">
+    .menu{
+      border: 2px; 
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 20px 30px;
+      padding-top:10px;
+      color: white;
+      font-size: 20px;
+      align: top;
+    }
+    .menu:hover{
+      border: 2px solid orange; 
+      color: black;
+      background-color: white;
+      font-weight: bolder;
+    }
+    .menu-active{
+      border: 2px; 
+      border-radius: 5px;
+      padding: 20px 30px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: black;
+      color: yellow;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+    .container{
+      height: 450px auto;
+      width: 500px;
+      margin: 50px auto;
+      background: #f7f7f7;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      -webkit-border-radius: 20px;
+      background-image: linear-gradient(red,orange,yellow);
+    }
+  </style>
+   <center>
+      <div style="background-color: rgba(0,0,0,0.9); padding: 0px 20px 10px 20px; "> 
+      <a href="Exercise1_Miras.html" style="" class="menu">Exercise 1</a>
+      <a href="Exercise2_Miras.html" style="" class="menu">Exercise 2</a>
+      <a href="Exercise3_Miras.html" style="" class="menu">Exercise 3</a>
+      <a href="Exercise4_Miras.html" style="" class="menu">Exercise 4</a>
+      <a href="Exercise5_Miras.html" style="" class="menu">Exercise 5</a>
+      <a href="Exercise6_Miras.html" style="" class="menu">Exercise 6</a>
+      <a href="Exercise7_Miras.html" style="margin-bottom: 1000px;" class="menu-active">Exercise 7</a>
+    </div>
+  <br>
+  <br>
+  <div class="container">
+    <h1>Tipping Calculator</h1>
+    
+      <label for="itemCost">Meal Amount </label><input id="itemCost" type="text">
+      <fieldset>
+        <legend>Tip Amount</legend>
+        <label for="ten">10% <input type="radio" value="10" name="percent" id="ten"></label>
+        <label for="fifteen">15% <input type="radio" value="15" name="percent" id="fifteen"></label>
+        <label for="twenty">20% <input type="radio" value="20" name="percent" id="twenty"></label>
+      </fieldset>
+      <button onclick="calculate()" id="submit" type="button" value="enter"><i class="fas fa-heart"></i> Submit <i class="fas fa-heart"></i></button>
+      <h2>Meal Amount: <span id="meal"></span></h2>
+      <h2>Amount to tip: <span id="tip"></span></h2>
+      <h2>Total cost: <span id="total"></span></h2>
+    </center>
+  </div>
+    <script>
+
+      function calculate(){
+  let tipAmount = 0;
+  for (let i = 0; i < radio.length; i++) {
+    if (radio[i].checked) {
+     tipAmount = parseFloat(radio[i].value);
+     break;
+    }
+  }
+  meal = parseFloat(itemCost.value)
+  tip = meal * (parseFloat(tipAmount/100));
+  total = meal + tip;
+  mealField.innerHTML = meal;
+  tipField.innerHTML = tip;
+  totalField.innerHTML = total;
+}
+let radio, itemCost, tip, total;
+radio = document.querySelectorAll('input[type="radio"]');
+itemCost = document.querySelector("#itemCost");
+mealField = document.querySelector('#meal');
+tipField = document.querySelector('#tip');
+totalField = document.querySelector('#total');
+document.querySelector("#submit").addEventListener("click", calculate);
+
+    </script>
+  </body>
+  </html>

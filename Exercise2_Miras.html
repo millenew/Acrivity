@@ -1,0 +1,94 @@
+<html>  
+  <body>  
+    <style type="text/css">
+    .menu{
+      border: 2px; 
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 20px 30px;
+      padding-top:10px;
+      color: white;
+      font-size: 20px;
+      align: top;
+    }
+
+    .menu:hover{
+      border: 2px solid orange; 
+      color: black;
+      background-color: white;
+      font-weight: bolder;
+    }
+    .menu-active{
+      border: 2px; 
+      border-radius: 5px;
+      padding: 20px 30px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: black;
+      color: yellow;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+    div{
+      font-size: 30px;
+    }
+    .container{
+      height: 450px;
+      width: 500px;
+      margin: 50px auto;
+      background: #f7f7f7;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      -webkit-border-radius: 20px;
+      background-image: linear-gradient(red,orange,yellow);
+    }
+    p{
+      font-family: lato;
+      font-size: 20px;
+    }
+    button{
+      font-size: 15px;
+    }
+  </style>
+   <center>
+     <div style="background-color: rgba(0,0,0,0.9); padding: 0px 20px 10px 20px; "> 
+     <a href="Exercise1_Miras.html" style="" class="menu">Exercise 1</a>
+      <a href="Exercise2_Miras.html" style="margin-bottom: 1000px;" class="menu-active">Exercise 2</a>
+      <a href="Exercise3_Miras.html" style="" class="menu">Exercise 3</a>
+      <a href="Exercise4_Miras.html" style="" class="menu">Exercise 4</a>
+      <a href="Exercise5_Miras.html" style="" class="menu">Exercise 5</a>
+      <a href="Exercise6_Miras.html" style="" class="menu">Exercise 6</a>
+      <a href="Exercise7_Miras.html" style="" class="menu">Exercise 7</a>
+    </div>
+  <center>
+    <br>
+    <br>
+  <div class="container">
+      <br>
+      <br>
+    <p>Click the button to increment the count</p>
+    <p id = "count"> 0 </p>
+    <button onclick="increment()">Press Me</button>
+  </div>
+  </center>
+  </body>
+
+
+  
+  <script type="text/javascript">
+    
+    var count = 0;
+    var size = 15;
+    
+    function increment(){
+      count++;
+      var text = document.getElementById("count");
+      text.innerHTML = count;
+      
+      size++;
+      text.style.fontSize = size;
+    }
+    
+  </script>
+  
+</html>
